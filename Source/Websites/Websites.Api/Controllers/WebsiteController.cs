@@ -46,9 +46,9 @@ namespace Websites.Api.Controllers
                 HomepageSnapshot = ImageToByteArray(input.Image)
             };
 
-            var entity = await this.websiteRepository.CreateOrUpdate(model);
+            var record = await this.websiteRepository.CreateOrUpdate(model);
 
-            return Ok(entity);
+            return Ok(record);
         }
 
         [HttpDelete]
